@@ -17,10 +17,10 @@ app.use((req, res, next) => {
 
 app.get("/", function (req, res) {
   if (!req.query.res) {
-    res.send("No query");
+    res.send("Wrong Access");
     return;
   }
-  result += req.query.res + "<br>";
+  result += req.query.res + "<br>------------------------------<br>";
   res.send("OK");
 });
 app.get("/see", function (req, res) {
